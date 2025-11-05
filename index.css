@@ -1,0 +1,13 @@
+div{
+    min-height: 100px;
+    min-width: 100px;
+    border: 1px solid blue;
+    margin: 25px;
+    padding: 25px
+}
+
+#category{
+    cursor: pointer;
+    padding: 25px;
+    margin: 26px;
+}
