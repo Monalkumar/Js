@@ -1828,41 +1828,70 @@
 // ))
 
 
-const company = {
+// const company = {
+//     name:"jhony",
+//     age:97,
+//     email:"jhnony@gmail.com",
+// }
+// function printDetails(country,state){
+//     console.log(`name ${this.name} age is ${this.age} and emails is ${this.email} and ${country} having ${state}` )
+// }
+//     printDetails.call(company,"india","Bihar")
+
+// const company2 = {
+//     name:"henary",
+//     age:95,
+//     email:"henary@gmail.com"
+// }
+// printDetails.call(company2,"USA","Delhi")
+// const company3 = {
+//     name:"henarye",
+//     age:96,
+//     email:"henarye@gmail.com"
+// }
+// printDetails.apply(company3,["USA","Bihar"]);
+
+// const company4 = {
+//     name:"henaryee",
+//     age:96,
+//     email:"henaryee@gmail.com"
+// }
+// printDetails.apply(company4,["USA","Bihar"]);
+// const company5 = {
+//     name:"henaryee",
+//     age:96,
+//     email:"henaryee@gmail.com"
+// }
+// printDetails.apply(company5,["USA","Bihar"]);
+// const bindFunction = printDetails.bind(company4,"USA","UP");
+// bindFunction()
+
+// let user = { name: "Monal" };
+// user = null;
+
+const userDetails = {
     name:"jhony",
     age:97,
-    email:"jhnony@gmail.com",
+    email:"jhony@gmail.com"
 }
 function printDetails(country,state){
-    console.log(`name ${this.name} age is ${this.age} and emails is ${this.email} and ${country} having ${state}` )
+    console.log(`name is ${this.name} having ${this.age} ${this.email} country is ${country} and ${state} `)
 }
-    printDetails.call(company,"india","Bihar")
+printDetails.call(userDetails,"india","Bihar")
 
-const company2 = {
+const userDetailsOne = {
+    name:"jhone",
+    age:"96",
+    email:"jhone@gmail.com",
+
+}
+
+printDetails.apply(userDetailsOne,["USA", "NY"]);
+const userDetailsTwo = {
     name:"henary",
-    age:95,
+    age:92,
     email:"henary@gmail.com"
 }
-printDetails.call(company2,"USA","Delhi")
-const company3 = {
-    name:"henarye",
-    age:96,
-    email:"henarye@gmail.com"
-}
-printDetails.apply(company3,["USA","Bihar"]);
-
-const company4 = {
-    name:"henaryee",
-    age:96,
-    email:"henaryee@gmail.com"
-}
-printDetails.apply(company4,["USA","Bihar"]);
-const company5 = {
-    name:"henaryee",
-    age:96,
-    email:"henaryee@gmail.com"
-}
-printDetails.apply(company5,["USA","Bihar"]);
-const bindFunction = printDetails.bind(company4,"USA","UP");
+const bindFunction = printDetails.bind(userDetailsTwo,"India","patna")
 bindFunction()
 
