@@ -1869,29 +1869,231 @@
 // let user = { name: "Monal" };
 // user = null;
 
-const userDetails = {
+// const userDetails = {
+//     name:"jhony",
+//     age:97,
+//     email:"jhony@gmail.com"
+// }
+// function printDetails(country,state){
+//     console.log(`name is ${this.name} having ${this.age} ${this.email} country is ${country} and ${state} `)
+// }
+// printDetails.call(userDetails,"india","Bihar")
+
+// const userDetailsOne = {
+//     name:"jhone",
+//     age:"96",
+//     email:"jhone@gmail.com",
+
+// }
+
+// printDetails.apply(userDetailsOne,["USA", "NY"]);
+// const userDetailsTwo = {
+//     name:"henary",
+//     age:92,
+//     email:"henary@gmail.com"
+// }
+// const bindFunction = printDetails.bind(userDetailsTwo,"India","patna")
+// bindFunction()
+
+// const Employee = {
+//     name:"hello",
+//     email:"jhony@gmail.com",
+//     age:100,
+    
+// }
+
+// const getEmployeeDetails=function(country, state){
+//         console.log(`name is ${this.name} having email id is ${this.email} and age is ${this.age} and country is ${country} and state is ${state}`)
+//     }
+
+// getEmployeeDetails.call(Employee, "India", "Bihar");
+
+// const EmployeeOne = {
+//     name:"henary",
+//     email:"henary@gmail.com",
+//     age:100,
+    
+// }
+// getEmployeeDetails.apply(EmployeeOne, ["USA", "CA"]);
+
+
+
+// const bindFunction = getEmployeeDetails.bind(Employee, "India", "Delhi");
+// bindFunction()
+
+
+// const foodOrderingApp = (foodItems) =>{
+//     return new Promise((resolve)=>{
+//         resolve(foodItems);
+//         console.log("please add food items here")
+//     })
+// }
+
+// const orderFood = (foodPrepare) => {
+//     return new Promise((resolve)=>{
+//         resolve(foodPrepare);
+//         console.log("cook pizza now")
+//     })
+// }
+
+// const addIngredients = (addMasala)=>{
+//     return new Promise((resolve)=>{
+//         resolve(addMasala);
+//         console.log("cook pizza now")
+//     })
+// }
+
+// const foodReady = (foodReadyNow)=>{
+//     return new Promise((resolve)=>{
+//         resolve(foodReadyNow)
+//         console.log("pizza is ready")
+//     })
+// }
+
+// const eatFood =(enjoyFood)=>{
+//     return new Promise((resolve)=>{
+//         resolve(enjoyFood)
+//         console.log("enjoying food now")
+//     })
+// }
+// foodOrderingApp("pizza")
+// .then(()=>orderFood())
+// .then(()=>addIngredients())
+// .then(()=>foodReady())
+// .then(()=>eatFood())
+// .then(()=>{
+//     console.log("perfect chaining")
+// })
+
+
+// call bind and apply
+
+// const Company = {
+//     name :"jhony",
+//     age:97,
+
+// }
+// const printDetails = function(country,state){
+//     console.log(` name is ${this.name} and age is ${this.age} and coutry is ${country} and state is ${state}`)
+// }
+// printDetails.call(Company,"india", "Bihar")
+
+// const Company2 = {
+//     name :"henary",
+//     age:95,
+// }
+
+// printDetails.apply(Company2,["USA", "canada"]);
+
+// const Company3 = {
+//     name :"genary",
+//     age:95,
+// }
+
+// const bindFunction = printDetails.bind(Company3,"India", "Bihar");
+// bindFunction();
+
+// const user={
+//     name:"jhony",
+//     age:97
+// }
+// const {name,age} = user;
+// console.log(user);
+
+
+// const arryOne = ["a","b","c","d","e"]
+// const arrayTwo = [ "hello", "hi", "hey"];
+// const newArray = [...arryOne,...arrayTwo]
+// console.log(newArray);
+
+// const coding ="javascript"
+
+// const myMap = new Map()
+// myMap.set(1,"A");
+// myMap.set(2,"B"),
+// myMap.set(1,"C")
+
+// console.log(myMap.get(1));
+// console.log(myMap.size);
+// function outerFunction(){
+//     let success = true
+//     function innerFunction(){
+//         console.log(success)
+//     }
+//     return innerFunction
+// }
+
+// let nums = outerFunction();
+// console.log(nums())
+
+// function* genFunc(){
+// yield 1;
+// console.log("first gen");
+// yield 2;
+// console.log("second gen");
+// yield 3;
+// console.log("third gen")
+// }
+
+// const gen = genFunc();
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next())
+// console.log(gen.next())
+
+
+ 
+// function* genFunction(){
+//     yield {name:"jhony"};
+//     yield {name:"henary"};
+//     yield {name:"genary"};
+    
+// }
+
+// const genfunc= genFunction();
+// console.log(genfunc.next());
+// console.log(genfunc.next());
+// console.log(genfunc.next());
+// console.log(genfunc.next());
+// console.log(genfunc.next()); 
+
+// function sum(a){
+//     return function(b){
+//         return function(c){
+//             return function(d){
+//                 return function(e){
+//                     return a+b+c+d+e
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+// const nums = (sum(1)(2)(3)(4)(5))
+// console.log(nums)
+
+const company = {
     name:"jhony",
-    age:97,
-    email:"jhony@gmail.com"
+    email:"jhony@gmail.com",
+    age:100
 }
+
 function printDetails(country,state){
-    console.log(`name is ${this.name} having ${this.age} ${this.email} country is ${country} and ${state} `)
+    console.log(`name is ${this.name} and email is ${this.email} having age ${this.age} living in ${country} in ${state} state`)
 }
-printDetails.call(userDetails,"india","Bihar")
+printDetails.call(company,"India", "Bihar")
 
-const userDetailsOne = {
-    name:"jhone",
-    age:"96",
-    email:"jhone@gmail.com",
-
+const companyOne = {
+    name:"jhonyy",
+    email:"jhonyy@gmail.com",
+    age:100
 }
-
-printDetails.apply(userDetailsOne,["USA", "NY"]);
-const userDetailsTwo = {
-    name:"henary",
-    age:92,
-    email:"henary@gmail.com"
+printDetails.apply(companyOne,["India", "UP"])
+const companyTwo = {
+    name:"jhonyy",
+    email:"jhonyy@gmail.com",
+    age:100
 }
-const bindFunction = printDetails.bind(userDetailsTwo,"India","patna")
+const bindFunction = printDetails.bind(companyTwo,"India", "Maharashtra");
 bindFunction()
-
