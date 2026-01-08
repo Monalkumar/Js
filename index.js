@@ -2073,27 +2073,29 @@
 // const nums = (sum(1)(2)(3)(4)(5))
 // console.log(nums)
 
-const company = {
-    name:"jhony",
-    email:"jhony@gmail.com",
-    age:100
-}
+// const company = {
+//     name:"jhony",
+//     email:"jhony@gmail.com",
+//     age:100
+// }
 
-function printDetails(country,state){
-    console.log(`name is ${this.name} and email is ${this.email} having age ${this.age} living in ${country} in ${state} state`)
-}
-printDetails.call(company,"India", "Bihar")
+// function printDetails(country,state){
+//     console.log(`name is ${this.name} and email is ${this.email} having age ${this.age} living in ${country} in ${state} state`)
+// }
+// printDetails.call(company,"India", "Bihar")
 
-const companyOne = {
-    name:"jhonyy",
-    email:"jhonyy@gmail.com",
-    age:100
-}
-printDetails.apply(companyOne,["India", "UP"])
-const companyTwo = {
-    name:"jhonyy",
-    email:"jhonyy@gmail.com",
-    age:100
-}
-const bindFunction = printDetails.bind(companyTwo,"India", "Maharashtra");
-bindFunction()
+// const companyOne = {
+//     name:"jhonyy",
+//     email:"jhonyy@gmail.com",
+//     age:100
+// }
+// printDetails.apply(companyOne,["India", "UP"])
+// const companyTwo = {
+//     name:"jhonyy",
+//     email:"jhonyy@gmail.com",
+//     age:100
+// }
+// const bindFunction = printDetails.bind(companyTwo,"India", "Maharashtra");
+// bindFunction();
+
+
