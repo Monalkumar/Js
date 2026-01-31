@@ -1637,7 +1637,7 @@
 //   x();
 // }
 // z();
-
+ 
 // let count = 0
 // function getData(){
 //   count++
@@ -2098,4 +2098,13 @@
 // const bindFunction = printDetails.bind(companyTwo,"India", "Maharashtra");
 // bindFunction();
 
+function outer(){
+    const success =true;
+    function inner(){
+        console.log(success)
+    }
+    return inner
+}
 
+const closure = outer();
+console.log(closure())
