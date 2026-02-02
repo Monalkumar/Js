@@ -2098,13 +2098,29 @@
 // const bindFunction = printDetails.bind(companyTwo,"India", "Maharashtra");
 // bindFunction();
 
-function outer(){
-    const success =true;
-    function inner(){
-        console.log(success)
-    }
-    return inner
+// function outer(){
+//     const success =true;
+//     function inner(){
+//         console.log(success)
+//     }
+//     return inner
+// }
+
+// const closure = outer();
+// console.log(closure())
+
+function* generatorFunction(){
+    yield 1
+    console.log("first gen")
+    yield 2
+    console.log("second gen")
+    yield 2
+    console.log("third gen")
 }
 
-const closure = outer();
-console.log(closure())
+const generators = generatorFunction();
+console.log(generators.next())
+console.log(generators.next())
+console.log(generators.next())
+console.log(generators.next())
+console.log(generators.next())
