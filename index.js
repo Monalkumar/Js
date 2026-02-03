@@ -2109,18 +2109,44 @@
 // const closure = outer();
 // console.log(closure())
 
-function* generatorFunction(){
-    yield 1
-    console.log("first gen")
-    yield 2
-    console.log("second gen")
-    yield 2
-    console.log("third gen")
+// function* generatorFunction(){
+//     yield 1
+//     console.log("first gen")
+//     yield 2
+//     console.log("second gen")
+//     yield 2
+//     console.log("third gen")
+// }
+
+// const generators = generatorFunction();
+// console.log(generators.next())
+// console.log(generators.next())
+// console.log(generators.next())
+// console.log(generators.next())
+// console.log(generators.next())
+
+
+const employee={
+    name:"henary",
+    email:"henary@gmail.com",
+    age:100
 }
 
-const generators = generatorFunction();
-console.log(generators.next())
-console.log(generators.next())
-console.log(generators.next())
-console.log(generators.next())
-console.log(generators.next())
+const employeeDetails = function(state,country, ){
+    console.log(this.name+ " " + this.email + " "+ this.age, state,country)
+}
+employeeDetails.call(employee,"Bihar","India")
+
+const employee2={
+    name:"henary",
+    email:"henary@gmail.com",
+    age:100
+}
+employeeDetails.apply(employee2,["UP","India"]);
+const employee3={
+    name:"henary",
+    email:"henary@gmail.com",
+    age:100
+}
+const bindFunction = employeeDetails.bind(employee3,"Delhi","India");
+bindFunction()
