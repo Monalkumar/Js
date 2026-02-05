@@ -2126,27 +2126,38 @@
 // console.log(generators.next())
 
 
-const employee={
-    name:"henary",
-    email:"henary@gmail.com",
-    age:100
-}
+// const employee={
+//     name:"henary",
+//     email:"henary@gmail.com",
+//     age:100
+// }
 
-const employeeDetails = function(state,country, ){
-    console.log(this.name+ " " + this.email + " "+ this.age, state,country)
-}
-employeeDetails.call(employee,"Bihar","India")
+// const employeeDetails = function(state,country, ){
+//     console.log(this.name+ " " + this.email + " "+ this.age, state,country)
+// }
+// employeeDetails.call(employee,"Bihar","India")
 
-const employee2={
-    name:"henary",
-    email:"henary@gmail.com",
-    age:100
+// const employee2={
+//     name:"henary",
+//     email:"henary@gmail.com",
+//     age:100
+// }
+// employeeDetails.apply(employee2,["UP","India"]);
+// const employee3={
+//     name:"henary",
+//     email:"henary@gmail.com",
+//     age:100
+// }
+// const bindFunction = employeeDetails.bind(employee3,"Delhi","India");
+// bindFunction()
+
+
+function outerFunction(){
+    const name ="Henary";
+    function innerfunction(){
+        console.log(name)
+    }
+    return innerfunction
 }
-employeeDetails.apply(employee2,["UP","India"]);
-const employee3={
-    name:"henary",
-    email:"henary@gmail.com",
-    age:100
-}
-const bindFunction = employeeDetails.bind(employee3,"Delhi","India");
-bindFunction()
+const closures = outerFunction();
+console.log(closures())
