@@ -123,7 +123,8 @@ function getData(){
     console.log("hello world")
 }
 
-function debounce(func,delay){
+function debounce(func,delay){                                                                                                                                                                                                                           
+
     let timer;
     return function(){
         let context = this;
@@ -136,9 +137,18 @@ function debounce(func,delay){
     }
 }
 
-const betterFunction = debounce(getData,1000)
+function debounce(func,delay){
+
+}
 
 
+function debounce (func, delay){
+    return function (){
+        let context = this;
+        args = arguments;
+        clearTime
+    }
+}
 
 
 

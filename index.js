@@ -491,15 +491,15 @@
 //   });
 // }
 
-// function addMilkAndSugar() {
-//   return new Promise((resolve) => {
-//     console.log("Adding milk and sugar...");
-//     setTimeout(() => {
-//       console.log("Milk and sugar added");
-//       resolve();
-//     }, 1000);
-//   });
-// }
+function addMilkAndSugar() {
+  return new Promise((resolve) => {
+    console.log("Adding milk and sugar...");
+    setTimeout(() => {
+      console.log("Milk and sugar added");
+      resolve();
+    }, 1000);
+  });
+}
 
 // function serveTea() {
 //   return new Promise((resolve) => {
@@ -2152,12 +2152,303 @@
 // bindFunction()
 
 
-function outerFunction(){
-    const name ="Henary";
-    function innerfunction(){
-        console.log(name)
-    }
-    return innerfunction
-}
-const closures = outerFunction();
-console.log(closures())
+// function outerFunction(){
+//     const name ="Henary";
+//     function innerfunction(){
+//         console.log(name)
+//     }
+//     return innerfunction
+// }
+// const closures = outerFunction();
+// console.log(closures());
+
+// const promise1 = Promise.resolve(100);
+// const promise2 = 100;
+// const promise3 = new Promise((resolve,reject)=>{
+//     resolve("hello world")
+// })
+// Promise.all([promise1,promise2,promise3]).then((value)=>{
+//     console.log(value)
+// })
+// .catch((error)=>{
+// console.error(error.message)
+// })
+
+// const promise1 = Promise.resolve(3);
+// const promise2 = new Promise((resolve, reject) =>
+//   setTimeout(reject, 100, "foo"),
+// );
+// const promises = [promise1, promise2];
+
+// Promise.allSettled(promises).then((results) =>
+//   results.forEach((result) => console.log(result.status)),
+// );
+
+
+// const promise1 = new Promise((resolve, reject)=>{
+// setTimeout(()=>{
+//     resolve("hello world")
+// },200)
+// })
+
+// const promise2 = new Promise((resolve, reject)=>{
+// setTimeout(()=>{
+//     resolve("hello worlds")
+// },100)
+// })
+// const promise3 = new Promise((resolve, reject)=>{
+// setTimeout(()=>{
+//     resolve("hello worldy")
+// },500)
+// })
+// const promises = [promise1,promise2,promise3]
+
+// Promise.race(promises).then((value)=>{
+//     console.log(value)
+// })
+
+// const promise1 = Promise.resolve(100);
+// const promise2 = new Promise((resolve,reject)=>{
+//     setTimeout(resolve,100 , "foo" )
+// });
+// const promise3 = new Promise((resolve,reject)=>{
+//     setTimeout(resolve ,100 , "foo" )
+// });
+
+// const promises = [promise1, promise2, promise3];
+
+
+// Promise.all(promises).then((value)=>{
+//     console.log(value)
+// }) 
+
+
+//  function sum (a){
+//     return function (b){
+//         return function(c){
+//             return function(d){
+//                 return function(e){
+//                     return a+b+c+d+e
+//                 }
+//             }
+//         }
+//     }
+//  }
+// const nums = sum(1)(2)(3)(4)(5);
+// console.log(nums)
+
+
+// function sum(a,b,c,d,e){
+//     return a+b+c+d+e
+// }
+
+// const numbers = sum(1,2,3,4,5);
+// console.log(numbers)
+
+     
+// const userOne = {
+//     name:"Henary",
+//     age:"100", 
+    
+// }
+
+// const printUserDetails = function(country,state){
+//         console.log(`name is ${this.name} and  age is ${this.age} and country is ${country} and their state is ${state}`)
+//     }
+// printUserDetails.apply(userOne,["india", "Delhi"]);
+
+// const userTwo = {
+//     name:"Genary",  
+//     age:"100", 
+    
+// }
+// printUserDetails.apply(userTwo,["India","patna"]);
+   
+
+// function sayHello(){
+ 
+// }
+
+
+
+
+// const arr = [1,2,3,4,5];
+//  process of making tea here
+
+// Select Land
+//       |
+//       ↓
+// Create House Design
+//       |
+//       ↓
+// Buy Construction Materials
+//       |
+//       ↓
+// Build House Structure
+//       |
+//       ↓
+// Do Interior Work
+//       |
+//       ↓
+// Install Furniture
+//       |
+//       ↓
+// Shift Family
+//       |
+//       ↓
+// Decorate Home
+//       |
+//       ↓
+// Celebrate New Home
+//       |
+//       ↓
+// Live Happily ❤️
+
+
+// function selectLand(result){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log("I am purchasing land")
+//             resolve("I purchased land")
+//         },1000)
+        
+//     })
+// }
+// function createHouseDesign(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log("I am looking for modern and classic design for my home")
+//              resolve("I selected and confirm design of my home")
+//     },1000)
+//         })
+       
+// }
+// function buyConstructionMaterials(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log("I am buying constructions materials")
+//              resolve("I buyed constructions materials")
+//         },1000)
+       
+//     })
+// }
+// function buildHouseStructure(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log("I am building house structure")
+//              resolve("I build house structure properly")
+//         },1000)
+       
+//     })
+// }
+// function doInteriorWork(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log("I am working on interior designing of my home")
+//             resolve("I design very beuatiful interior design of my home")
+//         },1000)
+        
+//     })
+// }
+// function installFurniture(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log("I am looking for the best furniture")
+//              resolve("I installed best furniturre in my home")
+//         },1000)
+       
+//     })
+// }
+
+// function shiftFamily(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log("my family is shifting in my in home with grace of God🙏")
+//              resolve("My family set on my new Home")
+//         },1000)
+       
+//     })
+// }
+// function decorateHome(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log("I am decorating my new Home")
+//             resolve("I decorate my home so beautiful")
+//         },1000)
+        
+//     })
+// }
+// function celebrateNewHome(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log("we all are celebrating in new Home")
+//             resolve("we all are celebrating in new Home")
+//         },1000)
+        
+//     })
+// }
+// function liveHappily(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             console.log("we all are happy now Thank to God🙏")
+//             resolve("we all are happy now Thank to God🙏")
+//         },1000)
+        
+//     })
+// }
+//  selectLand()
+//  .then((result)=>createHouseDesign(result))
+//  .then(()=>buyConstructionMaterials())
+//  .then(()=>buildHouseStructure())
+//  .then(()=>doInteriorWork())
+//  .then(()=>installFurniture())
+//  .then(()=>shiftFamily())
+//  .then(()=>decorateHome())
+//  .then(()=>celebrateNewHome())
+//  .then(()=>liveHappily())
+//  .then(()=>{
+//     console.log("Thanks everyone")
+//  })
+
+
+
+// let a =10 ;
+//  a = 20;
+// console.log(a)
+
+// var a = 10;
+// a =20;
+// console.log(a)
+
+// const a = 10;
+// const a = 20;
+// console.log(a)
+
+// console.log(a)
+// var a = 100
+
+const a = new Promise((resolve)=>{
+  setTimeout(()=>{
+    resolve("eating")
+  },1000)
+})
+
+const b = new Promise((resolve)=>{
+  setTimeout(()=>{
+    resolve("playing")
+  },1500)
+})
+
+const c = new Promise((resolve)=>{
+  setTimeout(()=>{
+    resolve("dancing")
+  },2000)
+})
+
+Promise.allSettled([a,b,c])
+.then((result)=>{
+  console.log(result)
+})
+.catch((error)=>{
+  console.log("Error:",error)
+})
