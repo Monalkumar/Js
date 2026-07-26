@@ -2427,28 +2427,39 @@ function addMilkAndSugar() {
 // console.log(a)
 // var a = 100
 
-const a = new Promise((resolve)=>{
-  setTimeout(()=>{
-    resolve("eating")
-  },1000)
-})
+// const a = new Promise((resolve)=>{
+//   setTimeout(()=>{
+//     resolve("eating")
+//   },1000)
+// })
 
-const b = new Promise((resolve)=>{
-  setTimeout(()=>{
-    resolve("playing")
-  },1500)
-})
+// const b = new Promise((resolve)=>{
+//   setTimeout(()=>{
+//     resolve("playing")
+//   },1500)
+// })
 
-const c = new Promise((resolve)=>{
-  setTimeout(()=>{
-    resolve("dancing")
-  },2000)
-})
+// const c = new Promise((resolve)=>{
+//   setTimeout(()=>{
+//     resolve("dancing")
+//   },2000)
+// })
 
-Promise.allSettled([a,b,c])
-.then((result)=>{
-  console.log(result)
-})
-.catch((error)=>{
-  console.log("Error:",error)
-})
+// Promise.allSettled([a,b,c])
+// .then((result)=>{
+//   console.log(result)
+// })
+// .catch((error)=>{
+//   console.log("Error:",error)
+// })
+
+function outer(){
+  let success = true;
+  function inner(){
+    return outer
+  }
+  console.log("hello world")
+}
+
+
+outer()
