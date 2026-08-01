@@ -2453,13 +2453,54 @@ function addMilkAndSugar() {
 //   console.log("Error:",error)
 // })
 
-function outer(){
-  let success = true;
-  function inner(){
-    return outer
+// function outer(){
+//   let success = true;
+//   function inner(){
+//     return outer
+//   }
+//   console.log("hello world")
+// }
+
+
+// outer()
+
+// function count(){
+//   let count = 0;
+//   function innerCount(){
+//     console.log()
+//   }
+// }
+
+
+const employeeDetails={
+  name:"alex",
+  age:27,
+  department:"IT",
+  
+}
+const printfullDetails= function(state,country){
+    console.log(` name is ${this.name} and his age is ${this.age} and their department is ${this.department} living in country ${country} and ${state}`)
   }
-  console.log("hello world")
+printfullDetails.call(employeeDetails,"India","bihar")
+
+const employeeDetails2={
+  name:"alexy",
+  age:29,
+  department:"IT",
+  
 }
 
+printfullDetails.apply(employeeDetails2,["India","UP"]);
+const employeeDetails3={
+  name:"alexy",
+  age:29,
+  department:"IT",
+  
+}
 
-outer()
+const myBindFunction = printfullDetails.bind(employeeDetails,"India","Delhi")
+myBindFunction()
+
+
+
+
