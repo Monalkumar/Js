@@ -2472,35 +2472,56 @@ function addMilkAndSugar() {
 // }
 
 
-const employeeDetails={
-  name:"alex",
-  age:27,
-  department:"IT",
+// const employeeDetails={
+//   name:"alex",
+//   age:27,
+//   department:"IT",
   
-}
-const printfullDetails= function(state,country){
-    console.log(` name is ${this.name} and his age is ${this.age} and their department is ${this.department} living in country ${country} and ${state}`)
+// }
+// const printfullDetails= function(state,country){
+//     console.log(` name is ${this.name} and his age is ${this.age} and their department is ${this.department} living in country ${country} and ${state}`)
+//   }
+// printfullDetails.call(employeeDetails,"India","bihar")
+
+// const employeeDetails2={
+//   name:"alexy",
+//   age:29,
+//   department:"IT",
+  
+// }
+
+// printfullDetails.apply(employeeDetails2,["India","UP"]);
+// const employeeDetails3={
+//   name:"alexy",
+//   age:29,
+//   department:"IT",
+  
+// }
+
+// const myBindFunction = printfullDetails.bind(employeeDetails,"India","Delhi")
+// myBindFunction()
+
+
+function sum(a){
+  return function(b){
+    return function(c){
+      return function(d){
+        return function(e){
+          return a+b+c+d+e
+        }
+      }
+    }
   }
-printfullDetails.call(employeeDetails,"India","bihar")
+}  
 
-const employeeDetails2={
-  name:"alexy",
-  age:29,
-  department:"IT",
-  
+const sumNums = sum(1)(2)(3)(4)(5);
+console.log(sumNums)
+
+function* generator(){
+  yield "hello",
+  yield "world"
 }
 
-printfullDetails.apply(employeeDetails2,["India","UP"]);
-const employeeDetails3={
-  name:"alexy",
-  age:29,
-  department:"IT",
-  
-}
-
-const myBindFunction = printfullDetails.bind(employeeDetails,"India","Delhi")
-myBindFunction()
-
-
-
-
+const gen = generator()
+console.log(gen.next());
+console.log(gen.next())
