@@ -2525,3 +2525,19 @@ function* generator(){
 const gen = generator()
 console.log(gen.next());
 console.log(gen.next())
+
+
+console.log()
+// Promise.all and promise.allsettled and promise.race and promise.any
+
+document.querySelector("#grandParent").addEventListener("click", function(){
+  console.log("parent clicked")
+})
+
+document.querySelector("#parent").addEventListener("click", function(){
+  console.log("parent clicked")
+})
+
+document.querySelector("#child").addEventListener("click", function(){
+  console.log("child clicked")
+})
