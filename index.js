@@ -2531,13 +2531,13 @@ console.log()
 // Promise.all and promise.allsettled and promise.race and promise.any
 
 document.querySelector("#grandParent").addEventListener("click", function(){
-  console.log("parent clicked")
+  console.log("parent clicked please check event propagation")
 })
 
 document.querySelector("#parent").addEventListener("click", function(){
-  console.log("parent clicked")
+  console.log("parent clicked please check event propagation")
 })
 
 document.querySelector("#child").addEventListener("click", function(){
-  console.log("child clicked")
+  console.log("child clicked please check event propagation")
 })
