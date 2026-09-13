@@ -2305,111 +2305,112 @@ function addMilkAndSugar() {
 // Live Happily ❤️
 
 
-// function selectLand(result){
-//     return new Promise((resolve)=>{
-//         setTimeout(()=>{
-//             console.log("I am purchasing land")
-//             resolve("I purchased land")
-//         },1000)
+function selectLand(result){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log("I am purchasing land")
+            resolve("I purchased land")
+        },1000)
         
-//     })
-// }
-// function createHouseDesign(){
-//     return new Promise((resolve)=>{
-//         setTimeout(()=>{
-//             console.log("I am looking for modern and classic design for my home")
-//              resolve("I selected and confirm design of my home")
-//     },1000)
-//         })
+    })
+}
+function createHouseDesign(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log("I am looking for modern and classic design for my home")
+             resolve("I selected and confirm design of my home")
+    },1000)
+        })
        
-// }
-// function buyConstructionMaterials(){
-//     return new Promise((resolve)=>{
-//         setTimeout(()=>{
-//             console.log("I am buying constructions materials")
-//              resolve("I buyed constructions materials")
-//         },1000)
+}
+function buyConstructionMaterials(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log("I am buying constructions materials")
+             resolve("I buyed constructions materials")
+        },1000)
        
-//     })
-// }
-// function buildHouseStructure(){
-//     return new Promise((resolve)=>{
-//         setTimeout(()=>{
-//             console.log("I am building house structure")
-//              resolve("I build house structure properly")
-//         },1000)
+    })
+}
+function buildHouseStructure(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log("I am building house structure")
+             resolve("I build house structure properly")
+        },1000)
        
-//     })
-// }
-// function doInteriorWork(){
-//     return new Promise((resolve)=>{
-//         setTimeout(()=>{
-//             console.log("I am working on interior designing of my home")
-//             resolve("I design very beuatiful interior design of my home")
-//         },1000)
+    })
+}
+function doInteriorWork(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log("I am working on interior designing of my home")
+            resolve("I design very beuatiful interior design of my home")
+        },1000)
         
-//     })
-// }
-// function installFurniture(){
-//     return new Promise((resolve)=>{
-//         setTimeout(()=>{
-//             console.log("I am looking for the best furniture")
-//              resolve("I installed best furniturre in my home")
-//         },1000)
+    })
+}
+function installFurniture(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log("I am looking for the best furniture")
+             resolve("I installed best furniturre in my home")
+        },1000)
        
-//     })
-// }
+    })
+}
 
-// function shiftFamily(){
-//     return new Promise((resolve)=>{
-//         setTimeout(()=>{
-//             console.log("my family is shifting in my in home with grace of God🙏")
-//              resolve("My family set on my new Home")
-//         },1000)
+function shiftFamily(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log("my family is shifting in my in home with grace of God🙏")
+             resolve("My family set on my new Home")
+        },1000)
        
-//     })
-// }
-// function decorateHome(){
-//     return new Promise((resolve)=>{
-//         setTimeout(()=>{
-//             console.log("I am decorating my new Home")
-//             resolve("I decorate my home so beautiful")
-//         },1000)
+    })
+}
+function decorateHome(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log("I am decorating my new Home")
+            resolve("I decorate my home so beautiful")
+        },1000)
         
-//     })
-// }
-// function celebrateNewHome(){
-//     return new Promise((resolve)=>{
-//         setTimeout(()=>{
-//             console.log("we all are celebrating in new Home")
-//             resolve("we all are celebrating in new Home")
-//         },1000)
+    })
+}
+function celebrateNewHome(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log("we all are celebrating in new Home")
+            resolve("we all are celebrating in new Home")
+        },1000)
         
-//     })
-// }
-// function liveHappily(){
-//     return new Promise((resolve)=>{
-//         setTimeout(()=>{
-//             console.log("we all are happy now Thank to God🙏")
-//             resolve("we all are happy now Thank to God🙏")
-//         },1000)
+    })
+}
+function liveHappily(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log("we all are happy now Thank to God🙏")
+            resolve("we all are happy now Thank to God🙏")
+        },1000)
         
-//     })
-// }
-//  selectLand()
-//  .then((result)=>createHouseDesign(result))
-//  .then(()=>buyConstructionMaterials())
-//  .then(()=>buildHouseStructure())
-//  .then(()=>doInteriorWork())
-//  .then(()=>installFurniture())
-//  .then(()=>shiftFamily())
-//  .then(()=>decorateHome())
-//  .then(()=>celebrateNewHome())
-//  .then(()=>liveHappily())
-//  .then(()=>{
-//     console.log("Thanks everyone")
-//  })
+    })
+}
+ selectLand()
+ .then((result)=>createHouseDesign(result))
+ .then(()=>buyConstructionMaterials())
+ .then(()=>buildHouseStructure())
+ .then(()=>doInteriorWork())
+ .then(()=>installFurniture())
+ .then(()=>shiftFamily())
+ .then(()=>decorateHome())
+ .then(()=>celebrateNewHome())
+ .then(()=>liveHappily())
+ .then(()=>{
+    console.log("Thanks everyone")
+ })
 
+ 
 
 
 // let a =10 ;
@@ -2502,42 +2503,98 @@ function addMilkAndSugar() {
 // myBindFunction()
 
 
-function sum(a){
-  return function(b){
-    return function(c){
-      return function(d){
-        return function(e){
-          return a+b+c+d+e
-        }
-      }
-    }
-  }
-}  
+// function sum(a){
+//   return function(b){
+//     return function(c){
+//       return function(d){
+//         return function(e){
+//           return a+b+c+d+e
+//         }
+//       }
+//     }
+//   }
+// }  
 
-const sumNums = sum(1)(2)(3)(4)(5);
-console.log(sumNums)
+// const sumNums = sum(1)(2)(3)(4)(5);
+// console.log(sumNums)
 
-function* generator(){
-  yield "hello",
-  yield "world"
+// function* generator(){
+//   yield "hello",
+//   yield "world"
+// }
+
+// const gen = generator()
+// console.log(gen.next());
+// console.log(gen.next())
+
+
+// console.log()
+// // Promise.all and promise.allsettled and promise.race and promise.any
+
+// document.querySelector("#grandParent").addEventListener("click", function(){
+//   console.log("parent clicked please check event propagation")
+// })
+
+// document.querySelector("#parent").addEventListener("click", function(){
+//   console.log("parent clicked please check event propagation")
+// })
+
+// document.querySelector("#child").addEventListener("click", function(){
+//   console.log("child clicked please check event propagation")
+// })
+
+
+// Select Land
+//       |
+//       ↓
+// Create House Design
+//       |
+//       ↓
+// Buy Construction Materials
+//       |
+//       ↓
+// Build House Structure
+//       |
+//       ↓
+// Do Interior Work
+//       |
+//       ↓
+// Install Furniture
+//       |
+//       ↓
+// Shift Family
+//       |
+//       ↓
+// Decorate Home
+//       |
+//       ↓
+// Celebrate New Home
+//       |
+//       ↓
+// Live Happily ❤️
+
+// const selctLand=()=>{
+// return new Promise((resolve)=>{
+// setTimeout(()=>{
+//   console.log("I purchased the land now I want to make home")
+//   resolve("land purchased finally I am happy")
+// },1000)
+//  })
+// }
+
+// const createHouseDesign=()=>{
+//   return new Promise((resolve)=>{
+//     setTimeout(()=>{
+//       console.log("")
+//     })
+//   })
+// }
+
+
+const ingredients=()=>{
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log("hellow world")
+        })
+    })
 }
-
-const gen = generator()
-console.log(gen.next());
-console.log(gen.next())
-
-
-console.log()
-// Promise.all and promise.allsettled and promise.race and promise.any
-
-document.querySelector("#grandParent").addEventListener("click", function(){
-  console.log("parent clicked please check event propagation")
-})
-
-document.querySelector("#parent").addEventListener("click", function(){
-  console.log("parent clicked please check event propagation")
-})
-
-document.querySelector("#child").addEventListener("click", function(){
-  console.log("child clicked please check event propagation")
-})
