@@ -1828,43 +1828,43 @@ function addMilkAndSugar() {
 // ))
 
 
-// const company = {
-//     name:"jhony",
-//     age:97,
-//     email:"jhnony@gmail.com",
-// }
-// function printDetails(country,state){
-//     console.log(`name ${this.name} age is ${this.age} and emails is ${this.email} and ${country} having ${state}` )
-// }
-//     printDetails.call(company,"india","Bihar")
+const company = {
+    name:"jhony",
+    age:97,
+    email:"jhnony@gmail.com",
+}
+function printDetails(country,state){
+    console.log(`name ${this.name} age is ${this.age} and emails is ${this.email} and ${country} having ${state}` )
+}
+    printDetails.call(company,"india","Bihar")
 
-// const company2 = {
-//     name:"henary",
-//     age:95,
-//     email:"henary@gmail.com"
-// }
-// printDetails.call(company2,"USA","Delhi")
-// const company3 = {
-//     name:"henarye",
-//     age:96,
-//     email:"henarye@gmail.com"
-// }
-// printDetails.apply(company3,["USA","Bihar"]);
+const company2 = {
+    name:"henary",
+    age:95,
+    email:"henary@gmail.com"
+}
+printDetails.call(company2,"USA","Delhi")
+const company3 = {
+    name:"henarye",
+    age:96,
+    email:"henarye@gmail.com"
+}
+printDetails.apply(company3,["USA","Bihar"]);
 
-// const company4 = {
-//     name:"henaryee",
-//     age:96,
-//     email:"henaryee@gmail.com"
-// }
-// printDetails.apply(company4,["USA","Bihar"]);
-// const company5 = {
-//     name:"henaryee",
-//     age:96,
-//     email:"henaryee@gmail.com"
-// }
-// printDetails.apply(company5,["USA","Bihar"]);
-// const bindFunction = printDetails.bind(company4,"USA","UP");
-// bindFunction()
+const company4 = {
+    name:"henaryee",
+    age:96,
+    email:"henaryee@gmail.com"
+}
+printDetails.apply(company4,["USA","Bihar"]);
+const company5 = {
+    name:"henaryee",
+    age:96,
+    email:"henaryee@gmail.com"
+}
+printDetails.apply(company5,["USA","Bihar"]);
+const bindFunction = printDetails.bind(company4,"USA","UP");
+bindFunction()
 
 // let user = { name: "Monal" };
 // user = null;
@@ -2709,3 +2709,44 @@ setTimeout(() => {
   console.log("B");
 }, 0);
 console.log("C");
+
+
+
+
+const company = {
+    name:"jhony",
+    age:97,
+    email:"jhnony@gmail.com",
+}
+function printDetails(country,state){
+    console.log(`name ${this.name} age is ${this.age} and emails is ${this.email} and ${country} having ${state}` )
+}
+    printDetails.call(company,"india","Bihar")
+
+const company2 = {
+    name:"henary",
+    age:95,
+    email:"henary@gmail.com"
+}
+printDetails.call(company2,"USA","Delhi")
+const company3 = {
+    name:"henarye",
+    age:96,
+    email:"henarye@gmail.com"
+}
+printDetails.apply(company3,["USA","Bihar"]);
+
+const company4 = {
+    name:"henaryee",
+    age:96,
+    email:"henaryee@gmail.com"
+}
+printDetails.apply(company4,["USA","Bihar"]);
+const company5 = {
+    name:"henaryee",
+    age:96,
+    email:"henaryee@gmail.com"
+}
+printDetails.apply(company5,["USA","Bihar"]);
+const bindFunction = printDetails.bind(company4,"USA","UP");
+bindFunction()
