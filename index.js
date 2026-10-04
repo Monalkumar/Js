@@ -2750,3 +2750,15 @@ const company5 = {
 printDetails.apply(company5,["USA","Bihar"]);
 const bindFunction = printDetails.bind(company4,"USA","UP");
 bindFunction()
+
+console.log("A");
+
+setTimeout(() => {
+  console.log("B");
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("C");
+});
+
+console.log("D");
