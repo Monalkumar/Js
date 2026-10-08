@@ -2591,174 +2591,189 @@ function liveHappily(){
 // }
 
 
-console.log("1");
+// console.log("1");
 
-setTimeout(() => console.log("2"), 0);
+// setTimeout(() => console.log("2"), 0);
 
-Promise.resolve().then(() => console.log("3"));
+// Promise.resolve().then(() => console.log("3"));
 
-Promise.resolve().then(() => {
-  console.log("4");
-  setTimeout(() => console.log("5"), 0);
-  Promise.resolve().then(() => console.log("6"));
-});
+// Promise.resolve().then(() => {
+//   console.log("4");
+//   setTimeout(() => console.log("5"), 0);
+//   Promise.resolve().then(() => console.log("6"));
+// });
 
-console.log("7");
-
-
-async function foo() {
-  console.log("A");
-  await Promise.resolve();
-  console.log("B");
-}
-console.log("C");
-foo();
-console.log("D");
+// console.log("7");
 
 
-
-console.log("1");
-async function async1() {
-  console.log("2");
-  await async2();
-  console.log("3");
-}
-async function async2() {
-  console.log("4");
-}
-setTimeout(() => {
-  console.log("5");
-}, 0);
-Promise.resolve().then(() => console.log("6"));
-async1();
-console.log("7");
-
-1,2,4,7,6,3,5
+// async function foo() {
+//   console.log("A");
+//   await Promise.resolve();
+//   console.log("B");
+// }
+// console.log("C");
+// foo();
+// console.log("D");
 
 
+
+// console.log("1");
+// async function async1() {
+//   console.log("2");
+//   await async2();
+//   console.log("3");
+// }
+// async function async2() {
+//   console.log("4");
+// }
+// setTimeout(() => {
+//   console.log("5");
+// }, 0);
+// Promise.resolve().then(() => console.log("6"));
+// async1();
+// console.log("7");
+
+// 1,2,4,7,6,3,5
 
 
 
 
-console.log("1");
-setTimeout(() => console.log("2 "), 0);
-async function a() {
-  console.log("3");
-  await b();
-  console.log("4");
-}
-async function b() {
-  console.log("5");
-  await Promise.resolve();
-  console.log("6");
-}
-Promise.resolve().then(() => console.log("7"));
-a();
-console.log("8");
-
-1,8,3,5,7,4,6,2
 
 
-console.log("A");
-setTimeout(() => {
-  console.log("B");
-Promise.resolve().then(() => {
-    console.log("C");
-  });
-}, 0);
-Promise.resolve().then(() => {
-  console.log("D");
+// console.log("1");
+// setTimeout(() => console.log("2 "), 0);
+// async function a() {
+//   console.log("3");
+//   await b();
+//   console.log("4");
+// }
+// async function b() {
+//   console.log("5");
+//   await Promise.resolve();
+//   console.log("6");
+// }
+// Promise.resolve().then(() => console.log("7"));
+// a();
+// console.log("8");
 
-  setTimeout(() => {
-    console.log("E");
-  }, 0);
-});
-console.log("F");
-
-
-console.log("A");
-setTimeout(() => {
-  console.log("B");
-process.nextTick(() => {
-    console.log("C");
-  });
-Promise.resolve().then(() => {
-    console.log("D");
-  });
-}, 0);
-Promise.resolve().then(() => {             
-  console.log("E");
-process.nextTick(() => {
-    console.log("F");
-  });
-Promise.resolve().then(() => {
-    console.log("G");
-  });
-});
-process.nextTick(() => {
-  console.log("H");
-});
-console.log("I");    
-
-const arr = [1,2,3,4,5,6,7,8,9,10,11]
-console.log(arr[9]);
-
-console.log("A");
-
-setTimeout(() => {
-  console.log("B");
-}, 0);
-console.log("C");
+// 1,8,3,5,7,4,6,2
 
 
+// console.log("A");
+// setTimeout(() => {
+//   console.log("B");
+// Promise.resolve().then(() => {
+//     console.log("C");
+//   });
+// }, 0);
+// Promise.resolve().then(() => {
+//   console.log("D");
+
+//   setTimeout(() => {
+//     console.log("E");
+//   }, 0);
+// });
+// console.log("F");
 
 
-const company = {
-    name:"jhony",
-    age:97,
-    email:"jhnony@gmail.com",
-}
-function printDetails(country,state){
-    console.log(`name ${this.name} age is ${this.age} and emails is ${this.email} and ${country} having ${state}` )
-}
-    printDetails.call(company,"india","Bihar")
+// console.log("A");
+// setTimeout(() => {
+//   console.log("B");
+// process.nextTick(() => {
+//     console.log("C");
+//   });
+// Promise.resolve().then(() => {
+//     console.log("D");
+//   });
+// }, 0);
+// Promise.resolve().then(() => {             
+//   console.log("E");
+// process.nextTick(() => {
+//     console.log("F");
+//   });
+// Promise.resolve().then(() => {
+//     console.log("G");
+//   });
+// });
+// process.nextTick(() => {
+//   console.log("H");
+// });
+// console.log("I");    
 
-const company2 = {
-    name:"henary",
-    age:95,
-    email:"henary@gmail.com"
-}
-printDetails.call(company2,"USA","Delhi")
-const company3 = {
-    name:"henarye",
-    age:96,
-    email:"henarye@gmail.com"
-}
-printDetails.apply(company3,["USA","Bihar"]);
+// const arr = [1,2,3,4,5,6,7,8,9,10,11]
+// console.log(arr[9]);
 
-const company4 = {
-    name:"henaryee",
-    age:96,
-    email:"henaryee@gmail.com"
-}
-printDetails.apply(company4,["USA","Bihar"]);
-const company5 = {
-    name:"henaryee",
-    age:96,
-    email:"henaryee@gmail.com"
-}
-printDetails.apply(company5,["USA","Bihar"]);
-const bindFunction = printDetails.bind(company4,"USA","UP");
-bindFunction()
+// console.log("A");
 
-console.log("A");
+// setTimeout(() => {
+//   console.log("B");
+// }, 0);
+// console.log("C");
 
-setTimeout(() => {
-  console.log("B");
-}, 0);
 
-Promise.resolve().then(() => {
-  console.log("C");
-});
 
-console.log("D");
+
+// const company = {
+//     name:"jhony",
+//     age:97,
+//     email:"jhnony@gmail.com",
+// }
+// function printDetails(country,state){
+//     console.log(`name ${this.name} age is ${this.age} and emails is ${this.email} and ${country} having ${state}` )
+// }
+//     printDetails.call(company,"india","Bihar")
+
+// const company2 = {
+//     name:"henary",
+//     age:95,
+//     email:"henary@gmail.com"
+// }
+// printDetails.call(company2,"USA","Delhi")
+// const company3 = {
+//     name:"henarye",
+//     age:96,
+//     email:"henarye@gmail.com"
+// }
+// printDetails.apply(company3,["USA","Bihar"]);
+
+// const company4 = {
+//     name:"henaryee",
+//     age:96,
+//     email:"henaryee@gmail.com"
+// }
+// printDetails.apply(company4,["USA","Bihar"]);
+// const company5 = {
+//     name:"henaryee",
+//     age:96,
+//     email:"henaryee@gmail.com"
+// }
+// printDetails.apply(company5,["USA","Bihar"]);
+// const bindFunction = printDetails.bind(company4,"USA","UP");
+// bindFunction()
+
+// console.log("A");
+
+// setTimeout(() => {
+//   console.log("B");
+// }, 0);
+
+// Promise.resolve().then(() => {
+//   console.log("C");
+// });
+
+// console.log("D");
+
+
+console.log('1');
+
+setTimeout(() => console.log('2'), 0);
+
+setImmediate(() => console.log('3'));
+
+process.nextTick(() => console.log('4'));
+
+Promise.resolve().then(() => console.log('5'));
+
+console.log('6');
+
+
